@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:kss/core/utils/size_config.dart';
 import 'package:kss/core/widgets/custom_text.dart';
-import 'package:kss/user/Drower/profile/widgets/ImageProfile.dart';
-
+import 'package:kss/view/user/Drower/profile/widgets/ImageProfile.dart';
 
 import '../../../../core/widgets/Custom_FloatingActionButton.dart';
 import 'package:kss/core/const.dart';

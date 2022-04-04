@@ -1,18 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kss/user/BottomNavigationBarUser.dart';
-import 'package:kss/user/Catogries/Sub_Categories_cow.dart';
-import 'package:kss/user/Drower/MyDrower.dart';
-import 'package:kss/user/Drower/countact_Us/contactUs.dart';
-import 'package:kss/user/Drower/offers/offers_screen.dart';
-import 'package:kss/user/Drower/profile/edit_Profile.dart';
-import 'package:kss/user/Drower/profile/myProfile.dart';
-import 'package:kss/user/home/Home_csreen.dart';
-import 'package:kss/user/order_validation/Order_Validiaation_True.dart';
-import 'package:kss/user/order_validation/Validation_order_cancel.dart';
-import 'package:kss/user/order_validation/order_validation_flse.dart';
-import 'package:kss/user/testhome.dart';
 
-/*
 import 'package:kss/view/auth/OTP/OTP_Screen.dart';
 import 'package:kss/view/auth/forgot_password_screen.dart';
 import 'package:kss/view/auth/login_screen.dart';
@@ -34,7 +21,7 @@ import 'package:kss/view/user/order_validation/order_validation_flse.dart';
 import 'package:kss/view/user/order_validation/Validation_order_cancel.dart';
 import 'package:kss/view/user/testhome.dart';
 import 'package:kss/view/user/userMap.dart';
-*/
+
 void main() {
   // ignore: prefer_const_constructors
   runApp(MyApp());
@@ -48,19 +35,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Tajawal"),
-      home: Scaffold(body: HomeNavigationUserPage()
-          //SubCategoriesCow()
-          //SplashScreen()
-          //   Onbording()
-          //DriverMapScreen()
-          // ExamScreen()
-          //  UserMapScreen()
-          ),
+      home: Scaffold(body: SplashScreen()),
       routes: {
-        /*
-        'UserMapScreen': (context) {
-          return UserMapScreen();
-         },
+        //  'UserMapScreen': (context) {
+        //  return UserMapScreen();
+        //    },
         'DriverMapScreen': (context) {
           return DriverMapScreen();
         },
@@ -81,7 +60,7 @@ class MyApp extends StatelessWidget {
         }),
         'New Pass Screen': ((context) {
           return NewPassScreen();
-        }),*/
+        }),
         ////////////////////User////////////////
         'Home Screen': (context) {
           return HomeScreen();

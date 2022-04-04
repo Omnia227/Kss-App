@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:kss/core/widgets/custom_text.dart';
 
-
+import 'package:kss/view/user/Drower/MyDrower.dart';
 import 'package:kss/core/widgets/Custom_FloatingActionButton.dart';
-import 'package:kss/user/home/widgets/Categories_Card.dart';
-
+import 'package:kss/view/user/home/widgets/Categories_Card.dart';
 
 import '../../../core/const.dart';
 import '../../../core/utils/size_config.dart';
-import '../Drower/MyDrower.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

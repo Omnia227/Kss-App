@@ -2,14 +2,53 @@ import 'package:flutter/material.dart';
 
 import 'package:kss/core/utils/size_config.dart';
 import 'package:kss/core/widgets/custom_text.dart';
-import 'package:kss/user/Drower/offers/widgets/Custom_Card.dart';
-
+import 'package:kss/view/user/Catogries/widges/subCatogres_Card.dart';
 
 import '../../../../core/widgets/Custom_FloatingActionButton.dart';
 
-class OffersScreen extends StatelessWidget {
-  const OffersScreen({Key? key}) : super(key: key);
+class SubCategoriesCow extends StatelessWidget {
+//  const SubCategoriesCow({Key? key}) : super(key: key);
+  List<SubCatogresCard> catogries = [
+    SubCatogresCard(
+      press: () {},
+      image: "lib/assets/images/logo-01.png",
+      text: "خروف كامل",
+    ),
+    SubCatogresCard(
+      press: () {},
+      image: "lib/assets/images/logo-01.png",
+      text: "خروف كامل",
+    ),
+    SubCatogresCard(
+      press: () {},
+      image: "lib/assets/images/logo-01.png",
+      text: "خروف كامل",
+    ),
+    SubCatogresCard(
+      press: () {},
+      image: "lib/assets/images/logo-01.png",
+      text: "خروف كامل",
+    ),
+    SubCatogresCard(
+      press: () {},
+      image: "lib/assets/images/logo-01.png",
+      text: "خروف كامل",
+    ),
+    SubCatogresCard(
+      press: () {},
+      image: "lib/assets/images/logo-01.png",
+      text: "خروف كامل",
+    ),
+    SubCatogresCard(
+      press: () {
+        //   Navigator.of(context).pushNamed('Forgot Password Screen');
+      },
+      image: "lib/assets/images/logo-01.png",
+      text: "خروف كامل",
+    )
+  ];
 
+  SubCategoriesCow({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     SizeConfig();
@@ -20,7 +59,6 @@ class OffersScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: ListView(children: [
               Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomFloatingActionButton(
                     press: () {
@@ -40,17 +78,6 @@ class OffersScreen extends StatelessWidget {
               ),
               SizedBox(
                 height: SizeConfig.screenheight! * .02,
-              ),
-              Container(
-                height: SizeConfig.screenheight! / 1,
-                child: ListView.builder(
-                    itemCount: 10,
-                    // itemCount: value.length,
-                    itemBuilder: (context, i) {
-                      return CustomCard(
-                        text: "تخفيض %20",
-                      );
-                    }),
               ),
             ]),
           ),

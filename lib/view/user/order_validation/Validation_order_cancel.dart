@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kss/user/order_validation/widgets/Custom_Card_validation.dart';
 
-
+import 'package:kss/view/user/order_validation/widgets/Custom_Card_validation.dart';
 
 import '../../../core/utils/size_config.dart';
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kss/core/utils/size_config.dart';
-import 'package:kss/user/Drower/profile/widgets/profilePic.dart';
+import 'package:kss/view/user/Drower/profile/widgets/profilePic.dart';
+
 import '../../../../core/widgets/Custom_FloatingActionButton.dart';
 import '../../../../core/widgets/Custom_Text_Field.dart';
 import '../../../../core/widgets/custom_buttom.dart';
