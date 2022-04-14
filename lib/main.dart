@@ -5,21 +5,31 @@ import 'package:kss/view/auth/forgot_password_screen.dart';
 import 'package:kss/view/auth/login_screen.dart';
 import 'package:kss/view/auth/new_password_screen.dart';
 import 'package:kss/view/auth/registration_screen.dart';
+
 import 'package:kss/view/driver/driverMap.dart';
+import 'package:kss/view/driver/orderDriver.dart';
 import 'package:kss/view/onbording/onbording.dart';
 import 'package:kss/view/onbording/splashView.dart';
 import 'package:kss/view/user/BottomNavigationBarUser.dart';
+import 'package:kss/view/user/Catogries/Sub_Categories_Camel.dart';
 import 'package:kss/view/user/Catogries/Sub_Categories_cow.dart';
+import 'package:kss/view/user/Catogries/sub_Categries_Sheep.dart';
+import 'package:kss/view/user/Details/details.dart';
 import 'package:kss/view/user/Drower/offers/offers_screen.dart';
 import 'package:kss/view/user/Drower/profile/edit_Profile.dart';
 import 'package:kss/view/user/Drower/profile/myProfile.dart';
+import 'package:kss/view/user/Order%20details/Order%20details.dart';
+import 'package:kss/view/user/Order%20details/Order%20progress.dart';
+import 'package:kss/view/user/basket/basket.dart';
 import 'package:kss/view/user/home/Home_csreen.dart';
 import 'package:kss/view/user/Drower/MyDrower.dart';
 import 'package:kss/view/user/Drower/countact_Us/contactUs.dart';
+import 'package:kss/view/user/order%20information/Order%20information.dart';
+import 'package:kss/view/user/order/order.dart';
 import 'package:kss/view/user/order_validation/Order_Validiaation_True.dart';
 import 'package:kss/view/user/order_validation/order_validation_flse.dart';
 import 'package:kss/view/user/order_validation/Validation_order_cancel.dart';
-import 'package:kss/view/user/testhome.dart';
+
 import 'package:kss/view/user/userMap.dart';
 
 void main() {
@@ -35,7 +45,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Tajawal"),
-      home: Scaffold(body: SplashScreen()),
+      home: Scaffold(
+          body:
+
+              // HomeNavigationDriverPage()
+              //OrderDetailsProgressScreen()
+              // OrderDetailsScreen(),
+              //   OrderScreen()
+              //  OrderInformationScreen()
+              SplashScreen()
+          //  OrderDriverScreen()
+          // BasketScreen()
+          ),
       routes: {
         //  'UserMapScreen': (context) {
         //  return UserMapScreen();
@@ -95,8 +116,27 @@ class MyApp extends StatelessWidget {
         'Sub Categories Cow': (context) {
           return SubCategoriesCow();
         },
-        'HometestScreen': (context) {
-          return HometestScreen();
+
+        'Sub Categories Camel': (context) {
+          return SubCategoriesCamel();
+        },
+        'Sub Categories Sheep': (context) {
+          return SubCategoriesSheep();
+        },
+        'Details Screen': (context) {
+          return DetailsScreen();
+        },
+        'Order Information Screen': (context) {
+          return OrderInformationScreen();
+        },
+        'Basket Screen': (context) {
+          return BasketScreen();
+        },
+        'Order Details Screen': (context) {
+          return OrderDetailsScreen();
+        },
+        'Order Information Screen': (context) {
+          return OrderInformationScreen();
         }
       },
     );
