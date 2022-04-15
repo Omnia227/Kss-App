@@ -6,33 +6,11 @@ import 'package:kss/view/user/Catogries/widges/subCatogres_Card.dart';
 
 import '../../../../core/widgets/Custom_FloatingActionButton.dart';
 
-class SubCategoriesCow extends StatelessWidget {
+class SubCategoriesSheep extends StatelessWidget {
+  // const SubCategoriesSheep({Key? key}) : super(key: key);
   final snackBar = SnackBar(
     content: const Text('غير متوفر حالياً'),
   );
-//  const SubCategoriesCow({Key? key}) : super(key: key);
-  var My_CowSubCategories = [
-    {
-      'Sub_Categories_Id': "1",
-      'Sub_Categories_press': () {
-        // Navigator.of(context).pushNamed('Details Screen');
-      },
-      'Sub_Categories_Image': "lib/assets/images/download (7).jpg",
-      'Sub_Categories_Name': "عجل كامل",
-      'isVisible': false,
-    },
-    {
-      'Sub_Categories_Id': "2",
-      'Sub_Categories_press': () {
-        //   ScaffoldMessenger.of(context).showSnackBar(snackBar);
-      },
-      'Sub_Categories_Image': "lib/assets/images/ضلوع بقر.jpg",
-      'Sub_Categories_Name': "ضلوع",
-      'isVisible': true,
-    }
-  ];
-
-  SubCategoriesCow({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     SizeConfig();
@@ -55,7 +33,7 @@ class SubCategoriesCow extends StatelessWidget {
                     width: SizeConfig.screenwidth! * .2,
                   ),
                   CustomText(
-                    text: "بقر",
+                    text: "خراف",
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -77,11 +55,11 @@ class SubCategoriesCow extends StatelessWidget {
                       SubCatogresCard(
                         Sub_Categories_Id: "1",
                         Sub_Categories_press: () {
-                          Navigator.of(context).pushNamed('Details Screen');
+                          //    Navigator.of(context).pushNamed('Details Screen');
                         },
                         Sub_Categories_Image:
-                            "lib/assets/images/download (7).jpg",
-                        Sub_Categories_Name: "عجل كامل",
+                            "lib/assets/images/خروف_مسلوخ-removebg-preview.png",
+                        Sub_Categories_Name: "خروف كامل",
                         isVisible: false,
                       ),
                       SubCatogresCard(
@@ -89,7 +67,8 @@ class SubCategoriesCow extends StatelessWidget {
                         Sub_Categories_press: () {
                           ScaffoldMessenger.of(context).showSnackBar(snackBar);
                         },
-                        Sub_Categories_Image: "lib/assets/images/ضلوع بقر.jpg",
+                        Sub_Categories_Image:
+                            "lib/assets/images/ضلوع-removebg-preview.png",
                         Sub_Categories_Name: "ضلوع",
                         isVisible: true,
                       ),
@@ -99,8 +78,8 @@ class SubCategoriesCow extends StatelessWidget {
                           ScaffoldMessenger.of(context).showSnackBar(snackBar);
                         },
                         Sub_Categories_Image:
-                            "lib/assets/images/بقر ساق امامي.jpeg",
-                        Sub_Categories_Name: "ساق أمامي",
+                            "lib/assets/images/ساق_امامي-removebg-preview.png",
+                        Sub_Categories_Name: "ساق امامي",
                         isVisible: true,
                       ),
                       SubCatogresCard(
@@ -109,7 +88,7 @@ class SubCategoriesCow extends StatelessWidget {
                           ScaffoldMessenger.of(context).showSnackBar(snackBar);
                         },
                         Sub_Categories_Image:
-                            "lib/assets/images/ساق بقر خلفي.jpg",
+                            "lib/assets/images/ساق_خلفي-removebg-preview.png",
                         Sub_Categories_Name: "ساق خلفي",
                         isVisible: true,
                       ),
@@ -119,7 +98,7 @@ class SubCategoriesCow extends StatelessWidget {
                           ScaffoldMessenger.of(context).showSnackBar(snackBar);
                         },
                         Sub_Categories_Image:
-                            "lib/assets/images/بقر_صافي-removebg-preview.png",
+                            "lib/assets/images/أطباق_بلحم_العجل.jpg",
                         Sub_Categories_Name: "صافية",
                         isVisible: true,
                       ),
@@ -128,7 +107,7 @@ class SubCategoriesCow extends StatelessWidget {
                         Sub_Categories_press: () {
                           ScaffoldMessenger.of(context).showSnackBar(snackBar);
                         },
-                        Sub_Categories_Image: "lib/assets/images/رقبه بقر.jpg",
+                        Sub_Categories_Image: "lib/assets/images/رقبة.jpg",
                         Sub_Categories_Name: "فقرة",
                         isVisible: true,
                       ),
@@ -137,7 +116,8 @@ class SubCategoriesCow extends StatelessWidget {
                         Sub_Categories_press: () {
                           ScaffoldMessenger.of(context).showSnackBar(snackBar);
                         },
-                        Sub_Categories_Image: "lib/assets/images/بقر مفروم.png",
+                        Sub_Categories_Image:
+                            "lib/assets/images/مفروم-removebg-preview.png",
                         Sub_Categories_Name: "مفروم",
                         isVisible: true,
                       ),

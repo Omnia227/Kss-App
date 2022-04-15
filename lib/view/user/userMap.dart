@@ -1,22 +1,20 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
-//import 'package:location/location.dart' as lct;
+import 'package:location/location.dart' as lct;
 
 import '../../core/const.dart';
 import '../../core/widgets/small_buttom.dart';
 
-// ignore: use_key_in_widget_constructors
 class UserMapScreen extends StatefulWidget {
   @override
   _UserMapScreenState createState() => _UserMapScreenState();
 }
 
 class _UserMapScreenState extends State<UserMapScreen> {
-  // ignore: prefer_const_constructors
   LatLng currentLocation = LatLng(-2.131910, -79.940287);
   GoogleMapController? _mapController;
-  //lct.Location? location;
+  lct.Location? location;
 
   @override
   void initState() {
@@ -34,7 +32,6 @@ class _UserMapScreenState extends State<UserMapScreen> {
       setState(() {
         this.currentLocation =
             LatLng(currentLocation.latitude, currentLocation.longitude);
-        // ignore: unnecessary_this
         this._mapController!.animateCamera(CameraUpdate.newCameraPosition(
               CameraPosition(target: this.currentLocation, zoom: 14),
             ));
@@ -48,7 +45,7 @@ class _UserMapScreenState extends State<UserMapScreen> {
   }
 
   changedLocation() {
-   // location!.onLocationChanged.listen((lct.LocationData cLoc) {
+    location!.onLocationChanged.listen((lct.LocationData cLoc) {
       // ignore: unnecessary_null_comparison
       if (cLoc != null) locationUpdate(cLoc);
     });
@@ -82,16 +79,14 @@ class _UserMapScreenState extends State<UserMapScreen> {
 
 //crear Marker
   Set<Marker> _createMarker() {
-    // ignore: prefer_collection_literals
     var marker = Set<Marker>();
 
     marker.add(Marker(
-      // ignore: prefer_const_constructors
       markerId: MarkerId("MarkerCurrent"),
       position: currentLocation,
       icon: BitmapDescriptor.defaultMarker,
       infoWindow: InfoWindow(
-        title: "موقع الفحص",
+        title: "الموقع ",
         snippet:
             "Lat ${currentLocation.latitude} - Lng ${currentLocation.longitude} ",
       ),
@@ -127,7 +122,7 @@ class _UserMapScreenState extends State<UserMapScreen> {
                 padding: const EdgeInsets.all(3),
                 child: SmallButtom(
                   press: () {
-                    Navigator.of(context).pushNamed('DoctorMapScreen');
+                    //  Navigator.of(context).pushNamed('Examination2 Data');
                     // add code save position
                   },
                   text: "تأكيد",
@@ -136,12 +131,10 @@ class _UserMapScreenState extends State<UserMapScreen> {
         ],
       ),
       floatingActionButton: Container(
-        // ignore: prefer_const_constructors
         margin: EdgeInsets.fromLTRB(0, 0, 8, 30),
         child: FloatingActionButton(
           onPressed: getLocation,
           backgroundColor: Primarycolor,
-          // ignore: prefer_const_constructors
           child: Icon(
             Icons.place,
             color: Colors.white,
@@ -152,8 +145,6 @@ class _UserMapScreenState extends State<UserMapScreen> {
   }
 
   onDragEnd(LatLng position) {
-    // ignore: avoid_print
     print("nueva posicion $position");
   }
 }
-*/

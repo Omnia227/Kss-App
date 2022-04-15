@@ -6,22 +6,24 @@ import 'package:kss/core/widgets/custom_text.dart';
 import '../../../../../core/widgets/custom_listTile.dart';
 
 class CategoriesCard extends StatelessWidget {
-  final String text;
-  final VoidCallback? press;
-  final String? image;
+  final String? Categories_Id;
+  final String? Categories_Name;
+  final VoidCallback? Categories_Press;
+  final String? Categories_Image;
 
   // ignore: prefer_const_constructors_in_immutables
   CategoriesCard({
     Key? key,
-    this.text = "",
-    this.image,
-    this.press,
+    this.Categories_Id,
+    this.Categories_Name,
+    this.Categories_Press,
+    this.Categories_Image,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: press,
+      onTap: Categories_Press,
       child: Expanded(
         child: Material(
             color: Colors.white,
@@ -32,7 +34,8 @@ class CategoriesCard extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     image: DecorationImage(
-                        image: AssetImage(image!), fit: BoxFit.cover)),
+                        image: AssetImage(Categories_Image!),
+                        fit: BoxFit.cover)),
                 height: SizeConfig.screenheight! / 4.5,
                 child: Container(
                   decoration: BoxDecoration(
@@ -43,7 +46,7 @@ class CategoriesCard extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                       child: CustomText(
-                        text: text,
+                        text: Categories_Name!,
                         fontSize: 30,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

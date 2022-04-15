@@ -30,49 +30,52 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Scaffold(
           body: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-            child: ListView(children: [
-              Container(
-                height: SizeConfig.screenheight! / 2.5,
-                child: Image.asset("lib/assets/images/logo-01.png"),
-              ),
-              CustomTextFieldPhone(
-                myController: phone,
-              ),
-              CustomTextField(
-                  label: "كلمة المرور",
-                  myController: password,
-                  hint: "أدخل كلمة المرور",
-                  suffexIcon: IconButton(
-                      icon: Icon(
-                        _isObscure ? Icons.visibility : Icons.visibility_off,
-                        color: Primarycolor,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          _isObscure = !_isObscure;
-                        });
-                      }),
-                  obscureText: true),
-              CustomfaltlButtom(
-                text1: "نسيت كلمة المرور",
-                press: () {
-                  Navigator.of(context).pushNamed('Forgot Password Screen');
-                },
-              ),
-              CustomMaterialButtom(
-                  text: "دخول",
+            child: Form(
+              key: formStatelogin,
+              child: ListView(children: [
+                Container(
+                  height: SizeConfig.screenheight! / 2.5,
+                  child: Image.asset("lib/assets/images/logo-01.png"),
+                ),
+                CustomTextFieldPhone(
+                  myController: phone,
+                ),
+                CustomTextField(
+                    label: "كلمة المرور",
+                    myController: password,
+                    hint: "أدخل كلمة المرور",
+                    suffexIcon: IconButton(
+                        icon: Icon(
+                          _isObscure ? Icons.visibility : Icons.visibility_off,
+                          color: Primarycolor,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _isObscure = !_isObscure;
+                          });
+                        }),
+                    obscureText: true),
+                CustomfaltlButtom(
+                  text1: "نسيت كلمة المرور",
                   press: () {
-                    Navigator.of(context)
-                        .pushNamed('Home Navigation User Screen');
-                  }),
-              CustomfaltlButtom(
-                text: "ليس لديك حساب؟",
-                text1: "إنشاء حساب جديد",
-                press: () {
-                  Navigator.of(context).pushNamed('Registeration Screen');
-                },
-              )
-            ]),
+                    Navigator.of(context).pushNamed('Forgot Password Screen');
+                  },
+                ),
+                CustomMaterialButtom(
+                    text: "دخول",
+                    press: () {
+                      Navigator.of(context)
+                          .pushNamed('Home Navigation User Screen');
+                    }),
+                CustomfaltlButtom(
+                  text: "ليس لديك حساب؟",
+                  text1: "إنشاء حساب جديد",
+                  press: () {
+                    Navigator.of(context).pushNamed('Registeration Screen');
+                  },
+                )
+              ]),
+            ),
           ),
         ));
   }

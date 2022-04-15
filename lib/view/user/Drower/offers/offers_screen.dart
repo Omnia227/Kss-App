@@ -8,8 +8,17 @@ import 'package:kss/view/user/Drower/offers/widgets/Custom_Card.dart';
 import '../../../../core/widgets/Custom_FloatingActionButton.dart';
 
 class OffersScreen extends StatelessWidget {
-  const OffersScreen({Key? key}) : super(key: key);
-
+  //const OffersScreen({Key? key}) : super(key: key);
+  var OffersList = [
+    {"offer": "تخفيض 20%"},
+    {"offer": "تخفيض 20%"},
+    {"offer": "تخفيض 20%"},
+    {"offer": "تخفيض 20%"},
+    {"offer": "تخفيض 20%"},
+    {"offer": "تخفيض 20%"},
+    {"offer": "تخفيض 20%"},
+    {"offer": "تخفيض 20%"}
+  ];
   @override
   Widget build(BuildContext context) {
     SizeConfig();
@@ -20,11 +29,11 @@ class OffersScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: ListView(children: [
               Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomFloatingActionButton(
                     press: () {
-                      Navigator.of(context).pushNamed('Home Screen');
+                      Navigator.of(context)
+                          .pushNamed('Home Navigation User Screen');
                     },
                     icon: Icon(Icons.chevron_left_rounded, color: Colors.black),
                   ),
@@ -44,12 +53,11 @@ class OffersScreen extends StatelessWidget {
               Container(
                 height: SizeConfig.screenheight! / 1,
                 child: ListView.builder(
-                    itemCount: 10,
-                    // itemCount: value.length,
+                    itemCount: OffersList.length,
                     itemBuilder: (context, i) {
                       return CustomCard(
-                        text: "تخفيض %20",
-                      );
+                          //   text: OffersList[i].["offers"],
+                          );
                     }),
               ),
             ]),

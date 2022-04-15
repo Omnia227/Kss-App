@@ -16,9 +16,8 @@ class NewPassScreen extends StatefulWidget {
 class _NewPassScreenState extends State<NewPassScreen> {
   TextEditingController password = new TextEditingController();
   TextEditingController confirmpassword = new TextEditingController();
-  TextEditingController phone = new TextEditingController();
 
-  GlobalKey<FormState> formStatelogin = new GlobalKey<FormState>();
+  GlobalKey<FormState> formStateNewPassword = new GlobalKey<FormState>();
   bool _isObscure = true;
 
   @override
@@ -29,35 +28,38 @@ class _NewPassScreenState extends State<NewPassScreen> {
         child: Scaffold(
           body: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-            child: ListView(children: [
-              Container(
-                height: SizeConfig.screenheight! / 2.5,
-                child: Image.asset("lib/assets/images/new_Password.jpg"),
-              ),
-              CustomText(
-                text: "أدخل كلمة المرور الجديدة",
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                alignment: Alignment.center,
-              ),
-              SizedBox(height: SizeConfig.screenheight! * .05),
-              CustomTextField(
-                label: "كلمة المرور الجديدة",
-                myController: password,
-                hint: "أدخل كلمة المرور",
-              ),
-              CustomTextField(
-                label: "إعادة كلمة المرور",
-                myController: confirmpassword,
-                hint: "إعادة كلمة المرور",
-              ),
-              SizedBox(height: SizeConfig.screenheight! * .05),
-              CustomMaterialButtom(
-                  text: "تعيين",
-                  press: () {
-                    Navigator.of(context).pushNamed('Login Screen');
-                  }),
-            ]),
+            child: Form(
+              key: formStateNewPassword,
+              child: ListView(children: [
+                Container(
+                  height: SizeConfig.screenheight! / 2.5,
+                  child: Image.asset("lib/assets/images/new_Password.jpg"),
+                ),
+                CustomText(
+                  text: "أدخل كلمة المرور الجديدة",
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  alignment: Alignment.center,
+                ),
+                SizedBox(height: SizeConfig.screenheight! * .05),
+                CustomTextField(
+                  label: "كلمة المرور الجديدة",
+                  myController: password,
+                  hint: "أدخل كلمة المرور",
+                ),
+                CustomTextField(
+                  label: "إعادة كلمة المرور",
+                  myController: confirmpassword,
+                  hint: "إعادة كلمة المرور",
+                ),
+                SizedBox(height: SizeConfig.screenheight! * .05),
+                CustomMaterialButtom(
+                    text: "تعيين",
+                    press: () {
+                      Navigator.of(context).pushNamed('Login Screen');
+                    }),
+              ]),
+            ),
           ),
         ));
   }

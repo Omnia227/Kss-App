@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                         press: () {
                           Navigator.of(context).pushNamed('MyDrawer');
                         },
-                        icon: Icon(Icons.edit, color: Colors.grey),
+                        icon: Icon(Icons.dehaze_rounded, color: Colors.grey),
                       ),
                       CustomText(
                         text: "الأقسام",
@@ -58,26 +58,29 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: SizeConfig.screenheight! * .02),
                   CategoriesCard(
-                    image: "lib/assets/images/new_Password.jpg",
-                    text: "أبقار",
-                    press: () {
+                    Categories_Id: "1",
+                    Categories_Image: "lib/assets/images/cow.png",
+                    Categories_Name: "أبقار",
+                    Categories_Press: () {
                       Navigator.of(context).pushNamed('Sub Categories Cow');
                     },
                   ),
                   SizedBox(height: SizeConfig.screenheight! * .02),
                   CategoriesCard(
-                    image: "lib/assets/images/new_Password.jpg",
-                    text: "خراف",
-                    press: () {
-                      Navigator.of(context).pushNamed(' ');
+                    Categories_Id: "2",
+                    Categories_Image: "lib/assets/images/sheep.png",
+                    Categories_Name: "خراف",
+                    Categories_Press: () {
+                      Navigator.of(context).pushNamed('Sub Categories Sheep');
                     },
                   ),
                   SizedBox(height: SizeConfig.screenheight! * .02),
                   CategoriesCard(
-                    image: "lib/assets/images/new_Password.jpg",
-                    text: "أبل",
-                    press: () {
-                      Navigator.of(context).pushNamed(' ');
+                    Categories_Id: "3",
+                    Categories_Image: "lib/assets/images/camel.png",
+                    Categories_Name: "أبل",
+                    Categories_Press: () {
+                      Navigator.of(context).pushNamed('Sub Categories Camel');
                     },
                   )
                 ]))));

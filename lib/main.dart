@@ -7,7 +7,7 @@ import 'package:kss/view/auth/new_password_screen.dart';
 import 'package:kss/view/auth/registration_screen.dart';
 
 import 'package:kss/view/driver/driverMap.dart';
-import 'package:kss/view/driver/orderDriver.dart';
+import 'package:kss/view/driver/orderDriver/orderDriver.dart';
 import 'package:kss/view/onbording/onbording.dart';
 import 'package:kss/view/onbording/splashView.dart';
 import 'package:kss/view/user/BottomNavigationBarUser.dart';
@@ -48,15 +48,8 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
           body:
 
-              // HomeNavigationDriverPage()
-              //OrderDetailsProgressScreen()
-              // OrderDetailsScreen(),
-              //   OrderScreen()
-              //  OrderInformationScreen()
-              SplashScreen()
-          //  OrderDriverScreen()
-          // BasketScreen()
-          ),
+              // SplashScreen()
+              OrderDriverScreen()),
       routes: {
         //  'UserMapScreen': (context) {
         //  return UserMapScreen();
@@ -83,9 +76,7 @@ class MyApp extends StatelessWidget {
           return NewPassScreen();
         }),
         ////////////////////User////////////////
-        'Home Screen': (context) {
-          return HomeScreen();
-        },
+
         'MyDrawer': (context) {
           return MyDrawer();
         },
@@ -123,9 +114,7 @@ class MyApp extends StatelessWidget {
         'Sub Categories Sheep': (context) {
           return SubCategoriesSheep();
         },
-        'Details Screen': (context) {
-          return DetailsScreen();
-        },
+
         'Order Information Screen': (context) {
           return OrderInformationScreen();
         },
