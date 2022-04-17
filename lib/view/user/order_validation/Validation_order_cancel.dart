@@ -1,11 +1,34 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import 'package:kss/view/user/order_validation/widgets/Custom_Card_validation.dart';
 
 import '../../../core/utils/size_config.dart';
 
-class ValidationOrderCancelScreen extends StatelessWidget {
+class ValidationOrderCancelScreen extends StatefulWidget {
   const ValidationOrderCancelScreen({Key? key}) : super(key: key);
+
+  @override
+  State<ValidationOrderCancelScreen> createState() =>
+      _ValidationOrderCancelScreenState();
+}
+
+class _ValidationOrderCancelScreenState
+    extends State<ValidationOrderCancelScreen> {
+  void initState() {
+    super.initState();
+    StartTimer();
+  }
+
+  StartTimer() async {
+    var duration = Duration(seconds: 3);
+    return new Timer(duration, home);
+  }
+
+  home() {
+    Navigator.of(context).pushNamed('Home Navigation User Screen');
+  }
 
   @override
   Widget build(BuildContext context) {

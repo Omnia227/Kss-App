@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_maps_flutter: any
   permission_handler: any
-  location: 
+  location: ^4.2.0
   
   intl_phone_number_input: ^0.7.0+2
   #flutter_phone_direct_caller: ^2.1.0

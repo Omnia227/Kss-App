@@ -15,7 +15,7 @@ class HomeNavigationUserPage extends StatefulWidget {
 class _HomePageUserState extends State<HomeNavigationUserPage> {
   int _selectedIndex = 1;
   int count = 3;
-  int Num_Order = 5;
+  int Num_Order = 2;
   final _widgetOptions = [
     BasketScreen(), HomeScreen(), OrderScreen(),
     //page name

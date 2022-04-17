@@ -36,7 +36,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
 
   String _selected2 = 'بدون أحشاء';
 
-  int Num_Order = 5;
+  int Num_Order = 2;
 
   @override
   Widget build(BuildContext context) {

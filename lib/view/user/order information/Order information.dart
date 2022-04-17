@@ -1,4 +1,4 @@
-import 'dart:html';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -147,7 +147,7 @@ class _OrderInformationScreenState extends State<OrderInformationScreen> {
                   text: "تأكيد الطلب",
                   press: () {
                     Navigator.of(context)
-                        .pushNamed('Home Navigation User Screen');
+                        .pushNamed('Order Validiaation True Screen');
                   }),
             ]),
           ),

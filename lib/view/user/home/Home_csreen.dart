@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            Navigator.of(context).pushNamed('Profile');
+                            Navigator.of(context).pushNamed('Profile Screen');
                           },
                         ),
                       ),
@@ -77,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: SizeConfig.screenheight! * .02),
                   CategoriesCard(
                     Categories_Id: "3",
-                    Categories_Image: "lib/assets/images/camel.png",
+                    Categories_Image: "lib/assets/images/camel-04.png",
                     Categories_Name: "أبل",
                     Categories_Press: () {
                       Navigator.of(context).pushNamed('Sub Categories Camel');

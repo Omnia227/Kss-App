@@ -54,20 +54,20 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     SizedBox(height: SizeConfig.screenheight! * .22),
                     ImageProfile(),
-                    SizedBox(height: SizeConfig.screenheight! * .05),
+                    SizedBox(height: SizeConfig.screenheight! * .02),
                     CustomText(
                         text: "أمنية عبد الحفيظ",
                         fontSize: 20,
                         color: Colors.black54),
-                    SizedBox(height: SizeConfig.screenheight! * .05),
+                    SizedBox(height: SizeConfig.screenheight! * .02),
                     CustomText(
                         text: "012345678", fontSize: 20, color: Colors.black54),
-                    SizedBox(height: SizeConfig.screenheight! * .05),
+                    SizedBox(height: SizeConfig.screenheight! * .02),
                     CustomText(
                         text: "omniaabdhfz@gmail.com",
                         fontSize: 20,
                         color: Colors.black54),
-                    SizedBox(height: SizeConfig.screenheight! * .05),
+                    SizedBox(height: SizeConfig.screenheight! * .02),
                     CustomMaterialButtom(
                         color: Colors.grey.withOpacity(.3),
                         colorText: Colors.black,

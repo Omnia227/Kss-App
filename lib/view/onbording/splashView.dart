@@ -42,11 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                       fit: BoxFit.fill)),
               child: Center(
-                child: SizedBox(
-                  //   height: SizeConfig.screenheight! / 2.5,
-                  //      width: SizeConfig.screenwidth! / 1,
-                  child: Image.asset("lib/assets/images/white logo-01.png"),
-                ),
+                child: Image.asset("lib/assets/images/white logo-01.png"),
               ),
             ),
           ),

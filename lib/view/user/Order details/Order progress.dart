@@ -128,7 +128,7 @@ class OrderDetailsProgressScreen extends StatelessWidget {
                             text: "إلغاء الطلب",
                             press: () {
                               Navigator.of(context)
-                                  .pushNamed('Home Navigation User Screen');
+                                  .pushNamed('Validation Order Cancel Screen');
                             }),
                       ],
                     ),

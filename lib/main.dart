@@ -45,11 +45,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Tajawal"),
-      home: Scaffold(
-          body:
-
-              // SplashScreen()
-              OrderDriverScreen()),
+      home: Scaffold(body: SplashScreen()
+          // OrderDriverScreen()
+          ),
       routes: {
         //  'UserMapScreen': (context) {
         //  return UserMapScreen();
