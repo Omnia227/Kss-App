@@ -45,16 +45,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Tajawal"),
-      home: Scaffold(body: SplashScreen()
-          // OrderDriverScreen()
-          ),
+      home: Scaffold(
+          body:
+              // SplashScreen()
+              OrderDriverScreen()),
       routes: {
         'UserMapScreen': (context) {
           return UserMapScreen();
         },
-        'DriverMapScreen': (context) {
-          return DriverMapScreen();
-        },
+
         'onbording': (context) {
           return Onbording();
         },
@@ -124,7 +123,14 @@ class MyApp extends StatelessWidget {
         },
         'Order Information Screen': (context) {
           return OrderInformationScreen();
-        }
+        },
+        ////////////////////////driver
+        'order driver Screen': (context) {
+          return OrderDriverScreen();
+        },
+        'DriverMapScreen': (context) {
+          return DriverMapScreen();
+        },
       },
     );
   }
